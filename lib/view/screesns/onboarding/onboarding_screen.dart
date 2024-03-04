@@ -1,9 +1,11 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -34,8 +36,7 @@ class OnboardingScreen extends StatelessWidget {
                     child: Container(
                       height: height,
                       width: width,
-                      decoration: const ShapeDecoration(
-                          shape: OvalBorder(), color: AppColors.purple_100),
+                      decoration: const ShapeDecoration(shape: OvalBorder(), color: AppColors.purple_100),
                       child: Stack(
                         children: [
                           Positioned(
@@ -97,7 +98,7 @@ class OnboardingScreen extends StatelessWidget {
                       Flexible(
                         child: CustomText(
                           text: "Elevate your Style with Seamless shopping at your fingertips.",
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.w500,
                           color: AppColors.white_20,
                           maxLines: 2,
@@ -105,15 +106,20 @@ class OnboardingScreen extends StatelessWidget {
                           textAlign: TextAlign.start,
                         ),
                       ),
-                      Container(
-                        height: 44.h,
-                        width: 44.w,
-                        decoration: BoxDecoration(
-                          color: AppColors.purple_100,
-                          borderRadius: BorderRadius.circular(4.r),
+                      InkWell(
+                        onTap: () {
+                          Get.offAllNamed(AppRoute.signInScreen);
+                        },
+                        child: Container(
+                          height: 44.h,
+                          width: 44.w,
+                          decoration: BoxDecoration(
+                            color: AppColors.purple_100,
+                            borderRadius: BorderRadius.circular(4.r),
+                          ),
+                          child: Icon(Icons.arrow_forward_outlined,
+                              color: AppColors.white_100, size: 24.h),
                         ),
-                        child: Icon(Icons.arrow_forward_outlined,
-                            color: AppColors.white_100, size: 24.h),
                       ),
                     ],
                   ),
