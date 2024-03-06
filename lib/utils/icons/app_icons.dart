@@ -5,6 +5,7 @@ class AppIcons {
   static const String appIcon = "$basePath/app_icon.png";
   static const String appName = "$basePath/app_name.png";
   static const String apple = "$basePath/apple.svg";
+  static const String arrow = "$basePath/arrow.svg";
   static const String dob = "$basePath/dob.svg";
   static const String email = "$basePath/email.svg";
   static const String eye = "$basePath/eye.svg";

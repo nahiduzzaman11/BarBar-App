@@ -96,7 +96,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         child: widget.prefixIcon),
         suffixIcon: widget.isPassword ? GestureDetector(
           onTap: toggle,
-          child: Icon(obscureText? CupertinoIcons.eye : CupertinoIcons.eye_slash,color: AppColors.white_40),
+          child: Icon(obscureText? CupertinoIcons.eye_slash : CupertinoIcons.eye,color: AppColors.white_40),
         ) : widget.suffixIcon,
         suffixIconColor: widget.suffixIconColor,
         border: OutlineInputBorder(

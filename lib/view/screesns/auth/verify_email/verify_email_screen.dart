@@ -106,15 +106,18 @@ class VerifyEmailScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 44.h),
-                CustomElevatedButton(
-                    onPressed: () {
-                      Get.toNamed(AppRoute.selectGenderScreen);
-                    },
-                    titleText: "Continue",
-                    buttonWidth: width)
               ],
             ),
+          ),
+        ),
+        bottomNavigationBar: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
+          child: CustomElevatedButton(
+              onPressed: () {
+                Get.toNamed(AppRoute.selectGenderScreen);
+              },
+              titleText: "Continue",
+              buttonWidth: width,
           ),
         ),
       ),
