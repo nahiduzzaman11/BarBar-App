@@ -5,6 +5,7 @@ import 'package:barbar_app/view/widgets/button/custom_button.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
 import 'package:barbar_app/view/widgets/textfield/custom_textfield.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -59,14 +60,19 @@ class SignInScreen extends StatelessWidget {
                       imageType: ImageType.svg,
                       imageColor: AppColors.white_40),
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: CustomText(
-                      text: "Forget Password",
-                      fontSize: 18.sp,
-                      color: AppColors.purple_100,
-                      fontWeight: FontWeight.w600,
-                      top: 16.h,bottom: 24.h,
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed(AppRoute.forgetPasswordScreen);
+                  },
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: CustomText(
+                        text: "Forget Password",
+                        fontSize: 18.sp,
+                        color: AppColors.purple_100,
+                        fontWeight: FontWeight.w600,
+                        top: 16.h,bottom: 24.h,
+                    ),
                   ),
                 ),
                 CustomElevatedButton(onPressed: (){}, titleText: "Login",buttonWidth: width),

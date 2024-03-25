@@ -9,8 +9,8 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+class GetOTPScreen extends StatelessWidget {
+  const GetOTPScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +30,8 @@ class VerifyEmailScreen extends StatelessWidget {
           ),
         ),
         body: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 24.h),
           physics: const BouncingScrollPhysics(),
-          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
           child: SizedBox(
             width: width,
             child: Column(
@@ -39,7 +39,7 @@ class VerifyEmailScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomText(
-                  text: "Verify Email Address",
+                  text: "Get OTP",
                   fontSize: 24.sp,
                   color: AppColors.purple_100,
                   fontWeight: FontWeight.w600,
@@ -47,7 +47,7 @@ class VerifyEmailScreen extends StatelessWidget {
                   bottom: 24.h,
                 ),
                 CustomText(
-                  text: "We have sent a verification code to your  email address. Please check and enter the code here.",
+                  text: "Please enter the OTP code.",
                   fontSize: 16.sp,
                   maxLines: 3,
                   color: AppColors.purple_100,
@@ -112,11 +112,11 @@ class VerifyEmailScreen extends StatelessWidget {
         bottomNavigationBar: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
           child: CustomElevatedButton(
-              onPressed: () {
-                Get.toNamed(AppRoute.selectGenderScreen);
-              },
-              titleText: "Continue",
-              buttonWidth: width,
+            onPressed: () {
+              Get.toNamed(AppRoute.resetPasswordScreen);
+            },
+            titleText: "Verify",
+            buttonWidth: width,
           ),
         ),
       ),
