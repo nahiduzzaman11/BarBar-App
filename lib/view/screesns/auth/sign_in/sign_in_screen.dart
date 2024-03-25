@@ -75,7 +75,9 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomElevatedButton(onPressed: (){}, titleText: "Login",buttonWidth: width),
+                CustomElevatedButton(onPressed: (){
+                  Get.offAllNamed(AppRoute.navigationScreen);
+                }, titleText: "Login",buttonWidth: width),
                 SizedBox(height: 44.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
