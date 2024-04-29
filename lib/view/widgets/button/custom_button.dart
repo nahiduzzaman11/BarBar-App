@@ -46,8 +46,7 @@ class CustomElevatedButton extends StatelessWidget {
         child: Text(
           titleText,
           textAlign: textAlign,
-          style: GoogleFonts.lato(
-              color: titleColor, fontSize: titleSize, fontWeight: titleWeight),
+          style: GoogleFonts.lato(color: titleColor, fontSize: titleSize, fontWeight: titleWeight),
         ),
       ),
     );

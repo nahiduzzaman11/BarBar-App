@@ -15,4 +15,8 @@ class AppIcons {
   static const String password = "$basePath/password.svg";
   static const String phone = "$basePath/phone.svg";
   static const String user = "$basePath/user.svg";
+
+
+  static const String bell = "$basePath/bell.png";
+  static const String search = "$basePath/search.png";
 }
