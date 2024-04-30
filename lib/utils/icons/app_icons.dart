@@ -19,4 +19,8 @@ class AppIcons {
 
   static const String bell = "$basePath/bell.png";
   static const String search = "$basePath/search.png";
+  static const String searchSVG = "$basePath/search.svg";
+  static const String home = "$basePath/home.svg";
+  static const String appointment = "$basePath/appointment.svg";
+  static const String star = "$basePath/star.png";
 }

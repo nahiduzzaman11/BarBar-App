@@ -28,10 +28,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
   ];
 
   final List<String> navBarIcons = [
-    AppIcons.email,
-    AppIcons.password,
-    AppIcons.phone,
-    AppIcons.email,
+    AppIcons.home,
+    AppIcons.searchSVG,
+    AppIcons.appointment,
+    AppIcons.user,
   ];
 
   @override

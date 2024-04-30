@@ -11,6 +11,7 @@ class CustomRowText extends StatelessWidget {
       required this.title,
       this.subTitle = "See all",
       this.titleTextSize = 18,
+      this.gap = 16,
       this.subTitleTextSize = 14,
       this.titleFW = FontWeight.w600,
       this.subTitleFW = FontWeight.w500,
@@ -27,6 +28,7 @@ class CustomRowText extends StatelessWidget {
   final String title;
   final String subTitle;
   final double titleTextSize;
+  final double gap;
   final double subTitleTextSize;
   final int titleMaxLine;
   final int subTitleMaxLine;
@@ -60,16 +62,14 @@ class CustomRowText extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 16.w),
-          Flexible(
-            child: GestureDetector(
-              onTap: subOnTap,
-              child: CustomText(
-                text: subTitle,
-                fontWeight: subTitleFW,
-                fontSize: subTitleTextSize,
-                color: subTitleColor,
-              ),
+          SizedBox(width: gap.w),
+          GestureDetector(
+            onTap: subOnTap,
+            child: CustomText(
+              text: subTitle,
+              fontWeight: subTitleFW,
+              fontSize: subTitleTextSize,
+              color: subTitleColor,
             ),
           ),
         ],
