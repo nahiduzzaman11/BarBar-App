@@ -102,7 +102,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   bottom: 16.h),
               HomeSlider(slider: slider),
               SizedBox(height: 8.h),
-              const CustomRowText(title: "Available Services"),
+              CustomRowText(title: "Available Services", subOnTap: () {
+                Get.toNamed(AppRoute.servicesScreen);
+              }),
               CustomGridCard(physics: const NeverScrollableScrollPhysics(), data: data),
               SizedBox(height: 8.h),
               CustomRowText(title: "Salons",subOnTap: (){

@@ -12,6 +12,7 @@ import 'package:barbar_app/view/screesns/navigation/navigation_screen.dart';
 import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
 import 'package:barbar_app/view/screesns/product/product_screen.dart';
 import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
+import 'package:barbar_app/view/screesns/services/services_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -31,6 +32,7 @@ class AppRoute {
   static const String resetPasswordScreen = "/reset_password_screen";
   static const String navigationScreen = "/navigation_screen";
 
+  static const String servicesScreen = "/services_screen";
   static const String salonsScreen = "/salons_screen";
   static const String productScreen = "/product_screen";
 
@@ -49,6 +51,7 @@ class AppRoute {
     GetPage(name: resetPasswordScreen, page: ()=> const ResetPasswordScreen()),
     GetPage(name: navigationScreen, page: ()=>  const NavigationScreen()),
 
+    GetPage(name: servicesScreen, page: ()=>  const ServicesScreen()),
     GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
     GetPage(name: productScreen, page: ()=>  const ProductScreen()),
   ];
