@@ -127,7 +127,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 8.h),
-              const CustomRowText(title: "Products"),
+              CustomRowText(title: "Products", subOnTap: () {
+                Get.toNamed(AppRoute.productScreen);
+              }),
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
