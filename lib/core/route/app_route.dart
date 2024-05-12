@@ -9,6 +9,7 @@ import 'package:barbar_app/view/screesns/forget/forget_password/forget_password_
 import 'package:barbar_app/view/screesns/forget/get_otp/get_otp_screen.dart';
 import 'package:barbar_app/view/screesns/forget/reset_password/reset_password_screen.dart';
 import 'package:barbar_app/view/screesns/navigation/navigation_screen.dart';
+import 'package:barbar_app/view/screesns/notification/notification_screen.dart';
 import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
 import 'package:barbar_app/view/screesns/product/product_screen.dart';
 import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
@@ -32,6 +33,7 @@ class AppRoute {
   static const String resetPasswordScreen = "/reset_password_screen";
   static const String navigationScreen = "/navigation_screen";
 
+  static const String notificationScreen = "/notification_screen";
   static const String servicesScreen = "/services_screen";
   static const String salonsScreen = "/salons_screen";
   static const String productScreen = "/product_screen";
@@ -51,6 +53,7 @@ class AppRoute {
     GetPage(name: resetPasswordScreen, page: ()=> const ResetPasswordScreen()),
     GetPage(name: navigationScreen, page: ()=>  const NavigationScreen()),
 
+    GetPage(name: notificationScreen, page: ()=>  const NotificationScreen()),
     GetPage(name: servicesScreen, page: ()=>  const ServicesScreen()),
     GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
     GetPage(name: productScreen, page: ()=>  const ProductScreen()),

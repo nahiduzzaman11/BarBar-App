@@ -71,7 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(width: 16.w),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(AppRoute.notificationScreen);
+                    },
                     child: CustomImage(imageSrc: AppIcons.bell, size: 20.h),
                   ),
                   SizedBox(width: 16.w),
