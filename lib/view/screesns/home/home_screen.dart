@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
@@ -5,11 +6,13 @@ import 'package:barbar_app/view/screesns/home/inner_widget/home_slider.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
 import 'package:barbar_app/view/widgets/grid_card/custom_grid_card.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
+import 'package:barbar_app/view/widgets/product_card/custom_product_card.dart';
 import 'package:barbar_app/view/widgets/salon_card/custom_salon_card.dart';
 import 'package:barbar_app/view/widgets/text/custom_row_text.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -102,7 +105,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const CustomRowText(title: "Available Services"),
               CustomGridCard(physics: const NeverScrollableScrollPhysics(), data: data),
               SizedBox(height: 8.h),
-              const CustomRowText(title: "Salons"),
+              CustomRowText(title: "Salons",subOnTap: (){
+                Get.toNamed(AppRoute.salonsScreen);
+              }),
               SizedBox(
                 height: 230.h,
                 child: ListView.builder(
@@ -112,6 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     return CustomSalonCard(
                       width: MediaQuery.of(context).size.width * 0.6,
+                      right: 16.w,
                       title: "Downtown Salon",
                       subTitle: "#1",
                       address: "12 street, California, USA",
@@ -119,6 +125,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                 ),
+              ),
+              SizedBox(height: 8.h),
+              const CustomRowText(title: "Products"),
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 180.h,
+                    mainAxisExtent: 180.h,
+                    crossAxisSpacing: 16.w,
+                    mainAxisSpacing: 16.h),
+                itemCount: 2,
+                itemBuilder: (context, index) {
+                  return CustomProductCard(
+                    width: MediaQuery.of(context).size.width,
+                    title: "Hair Gel",
+                    review: "4.5",
+                    price: "120",
+                  );
+                },
               ),
             ],
           ),

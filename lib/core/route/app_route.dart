@@ -10,6 +10,7 @@ import 'package:barbar_app/view/screesns/forget/get_otp/get_otp_screen.dart';
 import 'package:barbar_app/view/screesns/forget/reset_password/reset_password_screen.dart';
 import 'package:barbar_app/view/screesns/navigation/navigation_screen.dart';
 import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
+import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -29,6 +30,8 @@ class AppRoute {
   static const String resetPasswordScreen = "/reset_password_screen";
   static const String navigationScreen = "/navigation_screen";
 
+  static const String salonsScreen = "/salons_screen";
+
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
     GetPage(name: onboarding, page: ()=> const OnboardingScreen()),
@@ -42,6 +45,8 @@ class AppRoute {
     GetPage(name: forgetPasswordScreen, page: ()=> const ForgetPasswordScreen()),
     GetPage(name: getOTPScreen, page: ()=> const GetOTPScreen()),
     GetPage(name: resetPasswordScreen, page: ()=> const ResetPasswordScreen()),
-    GetPage(name: navigationScreen, page: ()=>  NavigationScreen(selectedIndex: 0)),
+    GetPage(name: navigationScreen, page: ()=>  const NavigationScreen()),
+
+    GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
   ];
 }

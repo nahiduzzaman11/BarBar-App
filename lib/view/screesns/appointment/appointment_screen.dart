@@ -10,6 +10,6 @@ class AppointmentScreen extends StatefulWidget {
 class _AppointmentScreenState extends State<AppointmentScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold());
+    return const SafeArea(child: Scaffold());
   }
 }

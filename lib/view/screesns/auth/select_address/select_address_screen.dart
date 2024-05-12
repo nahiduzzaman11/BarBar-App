@@ -6,7 +6,6 @@ import 'package:barbar_app/view/widgets/button/custom_button.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
 import 'package:barbar_app/view/widgets/textfield/custom_textfield.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -26,11 +25,15 @@ class SelectAddressScreen extends StatelessWidget {
         extendBody: true,
         backgroundColor: AppColors.white_100,
         appBar: CustomAppBar(
-          appBarContent: IconButton(
-            icon: Icon(Icons.arrow_back_ios, size: 20.h, color: AppColors.white_10),
-            onPressed: () {
+          spreadRadius: 0.r,
+          appBarContent: GestureDetector(
+            onTap: () {
               Get.back();
             },
+            child: SizedBox(
+              height: 42.h,width: 42.w,
+              child: Icon(Icons.arrow_back_ios, size: 20.h, color: AppColors.white_10),
+            ),
           ),
         ),
         body: SingleChildScrollView(

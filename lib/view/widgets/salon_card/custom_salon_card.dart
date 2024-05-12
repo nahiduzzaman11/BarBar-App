@@ -22,12 +22,16 @@ class CustomSalonCard extends StatelessWidget {
     this.fontWidth = FontWeight.w600,
     this.textSize = 16,
     this.vertical = 8,
+    this.right = 0,
+    this.bottom = 0,
     this.address = "Address",
     this.review = "Review",
   });
 
   final double width;
   final double height;
+  final double right;
+  final double bottom;
   final String image;
   final double padding;
   final double borderRadius;
@@ -47,10 +51,11 @@ class CustomSalonCard extends StatelessWidget {
     return Container(
       width: width.w,
       padding: EdgeInsets.all(padding.h),
-      margin: EdgeInsets.only(right: 16.w),
+      margin: EdgeInsets.only(right: right.w, bottom: bottom.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius.r),
         color: cardColor,
+        border: Border.all(color: AppColors.purple_20,width: 1)
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
