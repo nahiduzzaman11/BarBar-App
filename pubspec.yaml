@@ -42,6 +42,7 @@ dependencies:
   pin_code_fields:
   carousel_slider:
   dots_indicator:
+  linear_progress_bar:
 
 
 dev_dependencies:

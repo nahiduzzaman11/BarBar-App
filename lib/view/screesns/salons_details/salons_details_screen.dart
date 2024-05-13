@@ -2,6 +2,7 @@ import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
 import 'package:barbar_app/view/screesns/salons_details/inner_widget/salon_info.dart';
+import 'package:barbar_app/view/screesns/salons_details/inner_widget/salon_reviews.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
 import 'package:barbar_app/view/widgets/grid_card/custom_grid_card.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
@@ -77,8 +78,9 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                 height: 200.h,
                 margin: EdgeInsets.only(bottom: 24.h),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.r),
-                    image: const DecorationImage(image: AssetImage(AppImages.banner), fit: BoxFit.fill),
+                  borderRadius: BorderRadius.circular(8.r),
+                  image: const DecorationImage(
+                      image: AssetImage(AppImages.banner), fit: BoxFit.fill),
                 ),
               ),
               Row(
@@ -95,10 +97,9 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                       CustomImage(imageSrc: AppIcons.star, size: 14.h),
                       CustomText(text: "(4.5)", fontSize: 16.sp, left: 4.w),
                     ],
-                  )
+                  ),
                 ],
               ),
-
               SizedBox(height: 24.h),
               GestureDetector(
                 onTap: () {
@@ -108,10 +109,11 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                 },
                 child: Container(
                   width: width,
-                  padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
                   decoration: BoxDecoration(
-                      color: AppColors.purple_10,
-                      borderRadius: BorderRadius.circular(8.r),
+                    color: AppColors.purple_10,
+                    borderRadius: BorderRadius.circular(8.r),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,7 +134,6 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                 ),
               ),
               salonInfo == true ? const SalonInfo() : const SizedBox(),
-
               SizedBox(height: 24.h),
               GestureDetector(
                 onTap: () {
@@ -142,10 +143,11 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                 },
                 child: Container(
                   width: width,
-                  padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
                   decoration: BoxDecoration(
-                      color: AppColors.purple_10,
-                      borderRadius: BorderRadius.circular(8.r),
+                    color: AppColors.purple_10,
+                    borderRadius: BorderRadius.circular(8.r),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -165,22 +167,23 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                   ),
                 ),
               ),
-              salonService == true ? CustomGridCard(
-                physics: const NeverScrollableScrollPhysics(),
-                data: data,
-                borderWidth: 1.w,
-                marginHorizontal: 8.w,
-                maxLines: 2,
-                imageHeight: 50.h,
-                imageWidth: 50.w,
-                mainAxisSpacing: 8.w,
-                crossAxisSpacing: 8.h,
-                mainAxisExtent: 90.h,
-                cardBorderColor: AppColors.purple_10,
-                paddingHorizontal: 8.w,
-                paddingVertical: 16.h,
-              ) : const SizedBox(),
-
+              salonService == true
+                  ? CustomGridCard(
+                      physics: const NeverScrollableScrollPhysics(),
+                      data: data,
+                      borderWidth: 1.w,
+                      marginHorizontal: 8.w,
+                      maxLines: 2,
+                      imageHeight: 50.h,
+                      imageWidth: 50.w,
+                      mainAxisSpacing: 8.w,
+                      crossAxisSpacing: 8.h,
+                      mainAxisExtent: 90.h,
+                      cardBorderColor: AppColors.purple_10,
+                      paddingHorizontal: 8.w,
+                      paddingVertical: 16.h,
+                    )
+                  : const SizedBox(),
               SizedBox(height: 24.h),
               GestureDetector(
                 onTap: () {
@@ -190,11 +193,11 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                 },
                 child: Container(
                   width: width,
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
                   decoration: BoxDecoration(
-                      color: AppColors.purple_10,
-                      borderRadius: BorderRadius.circular(8.r)),
+                    color: AppColors.purple_10,
+                    borderRadius: BorderRadius.circular(8.r),
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -213,6 +216,7 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                   ),
                 ),
               ),
+              salonReview == true ? const SalonReviews() : const SizedBox(),
             ],
           ),
         ),
