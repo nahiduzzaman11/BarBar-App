@@ -121,6 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     return CustomSalonCard(
                       width: MediaQuery.of(context).size.width * 0.6,
+                      onTap: () => Get.toNamed(AppRoute.salonDetailsScreen),
                       right: 16.w,
                       title: "Downtown Salon",
                       subTitle: "#1",

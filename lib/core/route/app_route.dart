@@ -13,6 +13,7 @@ import 'package:barbar_app/view/screesns/notification/notification_screen.dart';
 import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
 import 'package:barbar_app/view/screesns/product/product_screen.dart';
 import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
+import 'package:barbar_app/view/screesns/salons_details/salons_details_screen.dart';
 import 'package:barbar_app/view/screesns/services/services_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
 import 'package:get/get.dart';
@@ -38,6 +39,8 @@ class AppRoute {
   static const String salonsScreen = "/salons_screen";
   static const String productScreen = "/product_screen";
 
+  static const String salonDetailsScreen = "/salons_details_screen";
+
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
     GetPage(name: onboarding, page: ()=> const OnboardingScreen()),
@@ -57,5 +60,7 @@ class AppRoute {
     GetPage(name: servicesScreen, page: ()=>  const ServicesScreen()),
     GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
     GetPage(name: productScreen, page: ()=>  const ProductScreen()),
+
+    GetPage(name: salonDetailsScreen, page: ()=>  const SalonsDetailsScreen()),
   ];
 }

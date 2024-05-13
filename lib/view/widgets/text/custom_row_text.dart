@@ -57,7 +57,7 @@ class CustomRowText extends StatelessWidget {
                 text: title,
                 maxLines: titleMaxLine,
                 fontWeight: titleFW,
-                fontSize: titleTextSize,
+                fontSize: titleTextSize.sp,
                 color: titleColor,
               ),
             ),
@@ -68,7 +68,7 @@ class CustomRowText extends StatelessWidget {
             child: CustomText(
               text: subTitle,
               fontWeight: subTitleFW,
-              fontSize: subTitleTextSize,
+              fontSize: subTitleTextSize.sp,
               color: subTitleColor,
             ),
           ),

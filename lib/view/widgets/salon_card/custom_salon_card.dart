@@ -26,6 +26,7 @@ class CustomSalonCard extends StatelessWidget {
     this.bottom = 0,
     this.address = "Address",
     this.review = "Review",
+    this.onTap
   });
 
   final double width;
@@ -44,52 +45,56 @@ class CustomSalonCard extends StatelessWidget {
   final double vertical;
   final String address;
   final String review;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
-    return Container(
-      width: width.w,
-      padding: EdgeInsets.all(padding.h),
-      margin: EdgeInsets.only(right: right.w, bottom: bottom.h),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(borderRadius.r),
-        color: cardColor,
-        border: Border.all(color: AppColors.purple_20,width: 1)
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: width.w,
-            height: height.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(borderRadius.r),
-              image: DecorationImage(image: AssetImage(image),fit: BoxFit.fill)
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: width.w,
+        padding: EdgeInsets.all(padding.h),
+        margin: EdgeInsets.only(right: right.w, bottom: bottom.h),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(borderRadius.r),
+          color: cardColor,
+          border: Border.all(color: AppColors.purple_20,width: 1)
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: width.w,
+              height: height.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(borderRadius.r),
+                image: DecorationImage(image: AssetImage(image),fit: BoxFit.fill)
+              ),
             ),
-          ),
-          CustomRowText(
-            title: title,
-            subTitle: subTitle,
-            titleColor: titleColor,
-            subTitleColor: titleColor,
-            subTitleFW: fontWidth,
-            titleFW: fontWidth,
-            subTitleTextSize: textSize.sp,
-            titleTextSize: textSize.sp,
-            vertical: vertical.h,
-            gap: 8.w,
-          ),
-          CustomText(text: address),
-          SizedBox(height: 8.h),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CustomImage(imageSrc: AppIcons.star, size: 14.h),
-              CustomText(text: "($review)", left: 4.w, fontSize: 12.sp),
-            ],
-          ),
-        ],
+            CustomRowText(
+              title: title,
+              subTitle: subTitle,
+              titleColor: titleColor,
+              subTitleColor: titleColor,
+              subTitleFW: fontWidth,
+              titleFW: fontWidth,
+              subTitleTextSize: textSize.sp,
+              titleTextSize: textSize.sp,
+              vertical: vertical.h,
+              gap: 8.w,
+            ),
+            CustomText(text: address),
+            SizedBox(height: 8.h),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CustomImage(imageSrc: AppIcons.star, size: 14.h),
+                CustomText(text: "($review)", left: 4.w, fontSize: 12.sp),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

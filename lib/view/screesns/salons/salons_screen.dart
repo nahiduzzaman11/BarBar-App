@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
@@ -64,6 +65,7 @@ class SalonsScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return CustomSalonCard(
                     width: MediaQuery.of(context).size.width,
+                    onTap: () => Get.toNamed(AppRoute.salonDetailsScreen),
                     bottom: 16.h,
                     title: "Downtown Salon",
                     subTitle: "#1",
