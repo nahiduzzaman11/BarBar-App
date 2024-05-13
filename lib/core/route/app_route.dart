@@ -14,6 +14,8 @@ import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
 import 'package:barbar_app/view/screesns/product/product_screen.dart';
 import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
 import 'package:barbar_app/view/screesns/salons_details/salons_details_screen.dart';
+import 'package:barbar_app/view/screesns/service_details/select_service_screen.dart';
+import 'package:barbar_app/view/screesns/service_details/service_details_screen.dart';
 import 'package:barbar_app/view/screesns/services/services_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
 import 'package:get/get.dart';
@@ -40,6 +42,8 @@ class AppRoute {
   static const String productScreen = "/product_screen";
 
   static const String salonDetailsScreen = "/salons_details_screen";
+  static const String serviceDetailsScreen = "/service_details_screen";
+  static const String selectServiceScreen = "/select_service_screen";
 
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
@@ -61,6 +65,8 @@ class AppRoute {
     GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
     GetPage(name: productScreen, page: ()=>  const ProductScreen()),
 
+    GetPage(name: serviceDetailsScreen, page: ()=>  const ServiceDetailsScreen()),
+    GetPage(name: selectServiceScreen, page: ()=>  const SelectServiceScreen()),
     GetPage(name: salonDetailsScreen, page: ()=>  const SalonsDetailsScreen()),
   ];
 }
