@@ -73,7 +73,7 @@ class NotificationScreen extends StatelessWidget {
                                 fontSize: 12.sp, textAlign: TextAlign.start),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   );

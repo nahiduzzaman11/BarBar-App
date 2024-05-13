@@ -1,10 +1,14 @@
 import 'package:barbar_app/utils/colors/app_colors.dart';
+import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
+import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:barbar_app/view/widgets/product_card/custom_product_card.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
+import 'package:barbar_app/view/widgets/textfield/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({super.key});
@@ -42,6 +46,17 @@ class ProductScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24.w,vertical: 24.h),
           child: Column(
             children: [
+              CustomTextField(
+                hintText: "Search products",
+                hintStyle: GoogleFonts.lato(color: AppColors.white_40, fontSize: 16.sp),
+                textInputAction: TextInputAction.done,
+                prefixIcon: CustomImage(
+                    imageSrc: AppIcons.search,
+                    imageType: ImageType.png,
+                    size: 18.h,
+                    imageColor: AppColors.white_40),
+              ),
+              SizedBox(height: 16.h),
               GridView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),

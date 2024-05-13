@@ -1,11 +1,15 @@
 import 'package:barbar_app/utils/colors/app_colors.dart';
+import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
 import 'package:barbar_app/view/widgets/grid_card/custom_grid_card.dart';
+import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
+import 'package:barbar_app/view/widgets/textfield/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ServicesScreen extends StatefulWidget {
   const ServicesScreen({super.key});
@@ -61,6 +65,17 @@ class _ServicesScreenState extends State<ServicesScreen> {
           physics: const ClampingScrollPhysics(),
           child: Column(
             children: [
+              CustomTextField(
+                hintText: "Search services",
+                hintStyle: GoogleFonts.lato(color: AppColors.white_40, fontSize: 16.sp),
+                textInputAction: TextInputAction.done,
+                prefixIcon: CustomImage(
+                    imageSrc: AppIcons.search,
+                    imageType: ImageType.png,
+                    size: 18.h,
+                    imageColor: AppColors.white_40),
+              ),
+              SizedBox(height: 16.h),
               CustomGridCard(physics: const NeverScrollableScrollPhysics(), data: data),
             ],
           ),
