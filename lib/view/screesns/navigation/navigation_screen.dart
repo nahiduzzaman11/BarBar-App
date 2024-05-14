@@ -9,15 +9,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NavigationScreen extends StatefulWidget {
-    const NavigationScreen({Key? key}) : super(key: key);
+     NavigationScreen({Key? key, required this.selectedIndex}) : super(key: key);
 
+     int selectedIndex;
 
   @override
   State<NavigationScreen> createState() => _NavigationScreenState();
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
-  int selectedIndex = 0;
+  //int selectedIndex = 0;
 
   final List<Widget> screens = [
     const HomeScreen(),
@@ -63,27 +64,27 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   (index) => GestureDetector(
                 onTap: () {
                   setState(() {
-                    selectedIndex = index;
+                    widget.selectedIndex = index;
                   });
                 },
                 child: Container(
                   height: 42.h,
                   padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
                   decoration: BoxDecoration(
-                    color: index == selectedIndex ? AppColors.purple_100 : AppColors.white_100,
+                    color: index == widget.selectedIndex ? AppColors.purple_100 : AppColors.white_100,
                     shape: BoxShape.circle,
                   ),
                   child: CustomImage(
                     imageSrc: navBarIcons[index],
                     imageType: ImageType.svg,
-                    imageColor: index == selectedIndex ? AppColors.white_100 : AppColors.purple_60,
+                    imageColor: index == widget.selectedIndex ? AppColors.white_100 : AppColors.purple_60,
                   ),
                 ),
               ),
             ),
           ),
         ),
-        body: screens[selectedIndex],
+        body: screens[widget.selectedIndex],
       ),
     );
   }

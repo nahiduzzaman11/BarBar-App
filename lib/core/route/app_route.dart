@@ -66,7 +66,7 @@ class AppRoute {
     GetPage(name: forgetPasswordScreen, page: ()=> const ForgetPasswordScreen()),
     GetPage(name: getOTPScreen, page: ()=> const GetOTPScreen()),
     GetPage(name: resetPasswordScreen, page: ()=> const ResetPasswordScreen()),
-    GetPage(name: navigationScreen, page: ()=>  const NavigationScreen()),
+    GetPage(name: navigationScreen, page: ()=>  NavigationScreen(selectedIndex: 0)),
 
     GetPage(name: notificationScreen, page: ()=>  const NotificationScreen()),
     GetPage(name: servicesScreen, page: ()=>  const ServicesScreen()),
