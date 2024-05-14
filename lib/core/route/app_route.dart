@@ -6,6 +6,7 @@ import 'package:barbar_app/view/screesns/auth/sign_in/sign_in_screen.dart';
 import 'package:barbar_app/view/screesns/auth/sign_up/sign_up_screen.dart';
 import 'package:barbar_app/view/screesns/auth/verify_email/verify_email_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/add_payment_screen.dart';
+import 'package:barbar_app/view/screesns/booking_payment/confirm_appointment_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/confirm_booking_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/select_date_time_screen.dart';
 import 'package:barbar_app/view/screesns/forget/forget_password/forget_password_screen.dart';
@@ -50,6 +51,7 @@ class AppRoute {
   static const String selectDateTimeScreen = "/select_date_time_screen";
   static const String confirmBookingScreen = "/confirm_booking_screen";
   static const String addPaymentScreen = "/add_payment_screen";
+  static const String confirmAppointmentScreen = "/confirm_appointment_screen";
 
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
@@ -76,6 +78,7 @@ class AppRoute {
     GetPage(name: selectDateTimeScreen, page: ()=>  const SelectDateTime()),
     GetPage(name: confirmBookingScreen, page: ()=>  const ConfirmBookingScreen()),
     GetPage(name: addPaymentScreen, page: ()=>  const AddPaymentScreen()),
+    GetPage(name: confirmAppointmentScreen, page: ()=>  const ConfirmAppointment()),
     GetPage(name: salonDetailsScreen, page: ()=>  const SalonsDetailsScreen()),
   ];
 }
