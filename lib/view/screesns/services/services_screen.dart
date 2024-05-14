@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
@@ -76,7 +77,9 @@ class _ServicesScreenState extends State<ServicesScreen> {
                     imageColor: AppColors.white_40),
               ),
               SizedBox(height: 16.h),
-              CustomGridCard(physics: const NeverScrollableScrollPhysics(), data: data),
+              CustomGridCard(physics: const NeverScrollableScrollPhysics(), data: data, itemOnTap: () {
+                Get.toNamed(AppRoute.serviceDetailsScreen);
+              }),
             ],
           ),
         ),

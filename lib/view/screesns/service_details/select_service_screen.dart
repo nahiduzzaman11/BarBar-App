@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
@@ -106,7 +107,9 @@ class _SelectServiceScreenState extends State<SelectServiceScreen> {
                 },
               ),
               SizedBox(height: 24.h),
-              CustomElevatedButton(onPressed: (){}, titleText: "Continue", buttonWidth: width)
+              CustomElevatedButton(onPressed: (){
+                Get.toNamed(AppRoute.selectDateTimeScreen);
+              }, titleText: "Continue", buttonWidth: width)
             ],
           ),
         ),
