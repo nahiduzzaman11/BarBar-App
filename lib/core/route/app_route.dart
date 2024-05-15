@@ -12,6 +12,7 @@ import 'package:barbar_app/view/screesns/booking_payment/select_date_time_screen
 import 'package:barbar_app/view/screesns/forget/forget_password/forget_password_screen.dart';
 import 'package:barbar_app/view/screesns/forget/get_otp/get_otp_screen.dart';
 import 'package:barbar_app/view/screesns/forget/reset_password/reset_password_screen.dart';
+import 'package:barbar_app/view/screesns/my_cart/check_out_screen.dart';
 import 'package:barbar_app/view/screesns/my_cart/my_cart_screen.dart';
 import 'package:barbar_app/view/screesns/navigation/navigation_screen.dart';
 import 'package:barbar_app/view/screesns/notification/notification_screen.dart';
@@ -58,6 +59,7 @@ class AppRoute {
   static const String productScreen = "/product_screen";
   static const String productDetailsScreen = "/product_details_screen";
   static const String myCartScreen = "/my_cart_screen";
+  static const String checkoutScreen = "/check_out_screen";
 
 
   static List<GetPage> routes = [
@@ -91,6 +93,7 @@ class AppRoute {
     GetPage(name: productScreen, page: ()=>  const ProductScreen()),
     GetPage(name: productDetailsScreen, page: ()=>  const ProductDetailsScreen()),
     GetPage(name: myCartScreen, page: ()=>  const MyCartScreen()),
+    GetPage(name: checkoutScreen, page: ()=>  const CheckOutScreen()),
 
   ];
 }
