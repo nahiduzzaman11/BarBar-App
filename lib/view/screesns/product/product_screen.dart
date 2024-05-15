@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
@@ -68,6 +69,9 @@ class ProductScreen extends StatelessWidget {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return CustomProductCard(
+                    onTap: () {
+                      Get.toNamed(AppRoute.productDetailsScreen);
+                    },
                     width: MediaQuery.of(context).size.width,
                     title: "Hair Gel",
                     review: "4.5",

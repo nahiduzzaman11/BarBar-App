@@ -7,16 +7,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SalonReviews extends StatelessWidget {
-  const SalonReviews({super.key});
+  const SalonReviews({super.key,
+     this.marginHorizontal = 8,
+     this.paddingLeft = 8,
+     this.paddingRight = 8,
+     this.paddingTop = 16,
+     this.borderColor = AppColors.purple_10,
+     this.borderWidth = 1});
+
+  final double marginHorizontal;
+  final double paddingLeft;
+  final double paddingRight;
+  final double paddingTop;
+  final double borderWidth;
+  final Color borderColor;
+
 
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
     return Container(
-      padding: EdgeInsets.only(left: 8.w, right: 8.w, top: 16.h),
-      margin: EdgeInsets.symmetric(horizontal: 8.w),
+      padding: EdgeInsets.only(left: paddingLeft.w, right: paddingRight.w, top: paddingTop.h),
+      margin: EdgeInsets.symmetric(horizontal: marginHorizontal.w),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.purple_10, width: 1.w),
+        border: Border.all(color: borderColor, width: borderWidth.w),
         borderRadius: BorderRadius.only(
           bottomRight: Radius.circular(8.r),
           bottomLeft: Radius.circular(8.r),

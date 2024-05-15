@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
@@ -171,6 +172,7 @@ class _SalonsDetailsScreenState extends State<SalonsDetailsScreen> {
                   ? CustomGridCard(
                       physics: const NeverScrollableScrollPhysics(),
                       data: data,
+                      itemOnTap: () {Get.toNamed(AppRoute.serviceDetailsScreen);},
                       borderWidth: 1.w,
                       marginHorizontal: 8.w,
                       maxLines: 2,

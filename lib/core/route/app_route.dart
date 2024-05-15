@@ -12,10 +12,12 @@ import 'package:barbar_app/view/screesns/booking_payment/select_date_time_screen
 import 'package:barbar_app/view/screesns/forget/forget_password/forget_password_screen.dart';
 import 'package:barbar_app/view/screesns/forget/get_otp/get_otp_screen.dart';
 import 'package:barbar_app/view/screesns/forget/reset_password/reset_password_screen.dart';
+import 'package:barbar_app/view/screesns/my_cart/my_cart_screen.dart';
 import 'package:barbar_app/view/screesns/navigation/navigation_screen.dart';
 import 'package:barbar_app/view/screesns/notification/notification_screen.dart';
 import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
 import 'package:barbar_app/view/screesns/product/product_screen.dart';
+import 'package:barbar_app/view/screesns/product_details/product_details_screen.dart';
 import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
 import 'package:barbar_app/view/screesns/salons_details/salons_details_screen.dart';
 import 'package:barbar_app/view/screesns/service_details/select_service_screen.dart';
@@ -41,17 +43,22 @@ class AppRoute {
   static const String navigationScreen = "/navigation_screen";
 
   static const String notificationScreen = "/notification_screen";
-  static const String servicesScreen = "/services_screen";
-  static const String salonsScreen = "/salons_screen";
-  static const String productScreen = "/product_screen";
 
-  static const String salonDetailsScreen = "/salons_details_screen";
+  static const String servicesScreen = "/services_screen";
   static const String serviceDetailsScreen = "/service_details_screen";
   static const String selectServiceScreen = "/select_service_screen";
   static const String selectDateTimeScreen = "/select_date_time_screen";
   static const String confirmBookingScreen = "/confirm_booking_screen";
   static const String addPaymentScreen = "/add_payment_screen";
   static const String confirmAppointmentScreen = "/confirm_appointment_screen";
+
+  static const String salonsScreen = "/salons_screen";
+  static const String salonDetailsScreen = "/salons_details_screen";
+
+  static const String productScreen = "/product_screen";
+  static const String productDetailsScreen = "/product_details_screen";
+  static const String myCartScreen = "/my_cart_screen";
+
 
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
@@ -69,16 +76,21 @@ class AppRoute {
     GetPage(name: navigationScreen, page: ()=>  NavigationScreen(selectedIndex: 0)),
 
     GetPage(name: notificationScreen, page: ()=>  const NotificationScreen()),
-    GetPage(name: servicesScreen, page: ()=>  const ServicesScreen()),
-    GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
-    GetPage(name: productScreen, page: ()=>  const ProductScreen()),
 
+    GetPage(name: servicesScreen, page: ()=>  const ServicesScreen()),
     GetPage(name: serviceDetailsScreen, page: ()=>  const ServiceDetailsScreen()),
     GetPage(name: selectServiceScreen, page: ()=>  const SelectServiceScreen()),
     GetPage(name: selectDateTimeScreen, page: ()=>  const SelectDateTime()),
     GetPage(name: confirmBookingScreen, page: ()=>  const ConfirmBookingScreen()),
     GetPage(name: addPaymentScreen, page: ()=>  const AddPaymentScreen()),
     GetPage(name: confirmAppointmentScreen, page: ()=>  const ConfirmAppointment()),
+
+    GetPage(name: salonsScreen, page: ()=>  const SalonsScreen()),
     GetPage(name: salonDetailsScreen, page: ()=>  const SalonsDetailsScreen()),
+
+    GetPage(name: productScreen, page: ()=>  const ProductScreen()),
+    GetPage(name: productDetailsScreen, page: ()=>  const ProductDetailsScreen()),
+    GetPage(name: myCartScreen, page: ()=>  const MyCartScreen()),
+
   ];
 }

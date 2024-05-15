@@ -149,6 +149,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemBuilder: (context, index) {
                   return CustomProductCard(
                     width: MediaQuery.of(context).size.width,
+                    onTap: () {
+                      Get.toNamed(AppRoute.productDetailsScreen);
+                    },
                     title: "Hair Gel",
                     review: "4.5",
                     price: "120",
