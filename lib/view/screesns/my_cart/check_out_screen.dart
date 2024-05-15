@@ -250,13 +250,12 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                           color: AppColors.white_100,
                           borderRadius: BorderRadius.circular(25.r),
                         ),
-                        child: const CustomText(
-                            text: "Place Order", fontWeight: FontWeight.w600),
+                        child: const CustomText(text: "Place Order", fontWeight: FontWeight.w600),
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

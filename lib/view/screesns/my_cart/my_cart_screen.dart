@@ -17,6 +17,7 @@ class MyCartScreen extends StatefulWidget {
 
 class _MyCartScreenState extends State<MyCartScreen> {
   int count = 1;
+  int length = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +61,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
               ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: 15,
+                itemCount: length,
                 itemBuilder: (context, index) {
                   return Container(
                     width: width,
@@ -68,7 +69,7 @@ class _MyCartScreenState extends State<MyCartScreen> {
                     margin: EdgeInsets.only(bottom: 8.h),
                     decoration: BoxDecoration(
                       border: Border(
-                        bottom: BorderSide(color: AppColors.white_80, width: 1.h),
+                        bottom: BorderSide(color: length-1 == index ? AppColors.white_100 : AppColors.white_80, width: 1.h),
                       ),
                     ),
                     child: Row(
@@ -89,7 +90,8 @@ class _MyCartScreenState extends State<MyCartScreen> {
                               child: CustomText(
                                   text: "1",
                                   color: AppColors.white_100,
-                                  fontSize: 12.sp),
+                                  fontSize: 12.sp,
+                              ),
                             ),
                             Container(
                               height: 60.h,
@@ -100,7 +102,8 @@ class _MyCartScreenState extends State<MyCartScreen> {
                                   borderRadius: BorderRadius.circular(4.r),
                                   image: const DecorationImage(
                                       image: AssetImage(AppImages.banner),
-                                      fit: BoxFit.fill),
+                                      fit: BoxFit.fill,
+                                  ),
                               ),
                             ),
                             Column(
