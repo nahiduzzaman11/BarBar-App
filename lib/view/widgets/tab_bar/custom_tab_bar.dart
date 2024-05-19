@@ -58,7 +58,7 @@ class CustomTab extends StatelessWidget {
             color: isSelected ? AppColors.purple_100 : Colors.white,
           ),
           child: CustomText(
-            text: title,
+            text: title, fontWeight: FontWeight.w600,
             color: isSelected ? AppColors.white_100 : AppColors.white_10,
             fontSize: 14.sp,
           ),

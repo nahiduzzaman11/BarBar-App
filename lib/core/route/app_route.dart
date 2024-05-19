@@ -1,3 +1,4 @@
+import 'package:barbar_app/view/screesns/appointment_details/appointment_details_screen.dart';
 import 'package:barbar_app/view/screesns/auth/select_address/select_address_screen.dart';
 import 'package:barbar_app/view/screesns/auth/select_gender/select_gender_screen.dart';
 import 'package:barbar_app/view/screesns/auth/set_password/set_password_screen.dart';
@@ -61,6 +62,8 @@ class AppRoute {
   static const String myCartScreen = "/my_cart_screen";
   static const String checkoutScreen = "/check_out_screen";
 
+  static const String appointmentDetailsScreen = "/appointment_details_screen";
+
 
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
@@ -94,6 +97,9 @@ class AppRoute {
     GetPage(name: productDetailsScreen, page: ()=>  const ProductDetailsScreen()),
     GetPage(name: myCartScreen, page: ()=>  const MyCartScreen()),
     GetPage(name: checkoutScreen, page: ()=>  const CheckOutScreen()),
+
+
+    GetPage(name: appointmentDetailsScreen, page: ()=>  const AppointmentDetailsScreen()),
 
   ];
 }

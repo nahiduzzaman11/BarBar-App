@@ -1,9 +1,10 @@
 import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
-import 'package:barbar_app/view/screesns/my_cart/inner_widget/delete_pop_up.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
+import 'package:barbar_app/view/widgets/pop_up/custom_pop_up.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -48,7 +49,16 @@ class _MyCartScreenState extends State<MyCartScreen> {
                   text: "My Cart",
                   fontSize: 18.sp,
                   color: AppColors.purple_100),
-              const DeletePopUp(),
+
+              GestureDetector(
+                onTap: () {
+                  showDialog(context: context, builder: (context) => const CustomPopUp());
+                },
+                child: SizedBox(
+                  height: 42.h,width: 42.w,
+                  child: Icon(CupertinoIcons.delete,color: AppColors.red_100,size: 18.h),
+                ),
+              ),
             ],
           ),
         ),
