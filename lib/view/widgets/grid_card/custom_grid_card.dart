@@ -69,8 +69,8 @@ class CustomGridCard extends StatelessWidget {
             crossAxisCount: crossAxisCount,
             crossAxisSpacing: crossAxisSpacing.w,
             mainAxisSpacing: mainAxisSpacing.w,
-            mainAxisExtent: mainAxisExtent,
-            childAspectRatio: childAspectRatio),
+            mainAxisExtent: mainAxisExtent.h,
+            childAspectRatio: childAspectRatio.h),
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: itemOnTap,

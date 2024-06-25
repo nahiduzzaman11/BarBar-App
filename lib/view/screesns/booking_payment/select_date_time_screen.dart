@@ -76,6 +76,7 @@ class _SelectDateTimeState extends State<SelectDateTime> {
         backgroundColor: AppColors.white_100,
         appBar: CustomAppBar(
           spreadRadius: 0.r,
+          appBarHeight: 64.h,
           appBarContent: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -169,7 +170,8 @@ class _SelectDateTimeState extends State<SelectDateTime> {
                   color: AppColors.purple_100,
                   fontWeight: FontWeight.w600,
                   top: 24.h,
-                  bottom: 16.h),
+                  bottom: 16.h,
+              ),
               SizedBox(
                 height: 68.h,
                 child: ListView.builder(
@@ -178,14 +180,12 @@ class _SelectDateTimeState extends State<SelectDateTime> {
                   itemCount: 15,
                   itemBuilder: (context, index) {
                     return Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+                      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
                       margin: EdgeInsets.only(right: 8.w),
                       decoration: BoxDecoration(
                           color: AppColors.purple_80,
                           borderRadius: BorderRadius.circular(8.r),
-                          border: Border.all(
-                              color: AppColors.purple_60, width: 1.w)),
+                          border: Border.all(color: AppColors.purple_60, width: 1.w)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,

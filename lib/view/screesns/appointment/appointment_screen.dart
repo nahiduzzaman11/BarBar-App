@@ -36,6 +36,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
         backgroundColor: AppColors.white_100,
         appBar: CustomAppBar(
           spreadRadius: 0.r,
+          appBarHeight: 64.h,
           appBarContent: Align(
               alignment: Alignment.center,
               child: CustomText(

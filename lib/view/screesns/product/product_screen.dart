@@ -24,6 +24,7 @@ class ProductScreen extends StatelessWidget {
         backgroundColor: AppColors.white_100,
         appBar: CustomAppBar(
           spreadRadius: 0.r,
+          appBarHeight: 64.h,
           appBarContent: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,7 +64,7 @@ class ProductScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 180.h,
-                    mainAxisExtent: 170.h,
+                    mainAxisExtent: 180.h,
                     crossAxisSpacing: 16.w,
                     mainAxisSpacing: 16.h),
                 itemCount: 10,

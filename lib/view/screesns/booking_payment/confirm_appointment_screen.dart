@@ -24,6 +24,7 @@ class ConfirmAppointment extends StatelessWidget {
         backgroundColor: AppColors.white_100,
         appBar: CustomAppBar(
           spreadRadius: 0.r,
+          appBarHeight: 64.h,
           appBarContent: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,

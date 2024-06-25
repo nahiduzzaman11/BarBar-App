@@ -23,6 +23,7 @@ class VerifyEmailScreen extends StatelessWidget {
         backgroundColor: AppColors.white_100,
         appBar: CustomAppBar(
           spreadRadius: 0.r,
+          appBarHeight: 64.h,
           appBarContent: GestureDetector(
             onTap: () {
               Get.back();
