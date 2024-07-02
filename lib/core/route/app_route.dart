@@ -10,6 +10,7 @@ import 'package:barbar_app/view/screesns/booking_payment/add_payment_screen.dart
 import 'package:barbar_app/view/screesns/booking_payment/confirm_appointment_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/confirm_booking_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/select_date_time_screen.dart';
+import 'package:barbar_app/view/screesns/edit_profile/edit_profile_screen.dart';
 import 'package:barbar_app/view/screesns/forget/forget_password/forget_password_screen.dart';
 import 'package:barbar_app/view/screesns/forget/get_otp/get_otp_screen.dart';
 import 'package:barbar_app/view/screesns/forget/reset_password/reset_password_screen.dart';
@@ -67,6 +68,7 @@ class AppRoute {
 
 
   static const String personalInfoScreen = "/personal_information_screen";
+  static const String editProfile = "/edit_profile_screen";
 
 
   static List<GetPage> routes = [
@@ -106,6 +108,7 @@ class AppRoute {
     GetPage(name: appointmentDetailsScreen, page: ()=>  const AppointmentDetailsScreen()),
 
     GetPage(name: personalInfoScreen, page: ()=>  const PersonalInformationScreen()),
+    GetPage(name: editProfile, page: ()=>  const EditProfileScreen()),
 
   ];
 }

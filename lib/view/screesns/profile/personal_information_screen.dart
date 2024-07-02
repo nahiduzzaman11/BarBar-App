@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
@@ -128,7 +129,9 @@ class PersonalInformationScreen extends StatelessWidget {
               ),
               SizedBox(height: 24.h),
               CustomElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(AppRoute.editProfile);
+                },
                 titleText: "Edit Profile",
                 buttonWidth: MediaQuery.of(context).size.width,
               ),
