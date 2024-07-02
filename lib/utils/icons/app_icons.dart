@@ -18,6 +18,14 @@ class AppIcons {
   static const String card = "$basePath/card.svg";
   static const String cart = "$basePath/cart.svg";
 
+  static const String history = "$basePath/history.svg";
+  static const String logout = "$basePath/logout.svg";
+  static const String message = "$basePath/message.svg";
+  static const String orders = "$basePath/orders.svg";
+  static const String settings = "$basePath/settings.svg";
+  static const String support = "$basePath/support.svg";
+  static const String wishlist = "$basePath/wishlist.svg";
+
 
   static const String bell = "$basePath/bell.png";
   static const String search = "$basePath/search.png";
