@@ -69,7 +69,9 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomText(text: "You’ve nothing here",fontSize: 18.sp,color: AppColors.purple_60,bottom: 16.h),
-                    CustomElevatedButton(onPressed: (){}, titleText: "Explore Salons",titleSize: 16.sp,titleWeight: FontWeight.w500),
+                    CustomElevatedButton(onPressed: (){
+                      Get.toNamed(AppRoute.salonsScreen);
+                    }, titleText: "Explore Salons",titleSize: 16.sp,titleWeight: FontWeight.w500),
                   ],
                 ),
               ) : CustomAppointmentCard(onTap: () => Get.toNamed(AppRoute.appointmentDetailsScreen)),
