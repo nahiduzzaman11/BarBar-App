@@ -35,6 +35,7 @@ import 'package:barbar_app/view/screesns/settings/privacy_policy/privacy_policy_
 import 'package:barbar_app/view/screesns/settings/settings_screen/settings_screen.dart';
 import 'package:barbar_app/view/screesns/settings/terms_of_service/terms_of_service_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
+import 'package:barbar_app/view/screesns/support/support_screen.dart';
 import 'package:get/get.dart';
 
 class AppRoute {
@@ -83,6 +84,7 @@ class AppRoute {
   static const String termsOfServices = "/terms_of_service_screen";
   static const String privacyPolicy = "/privacy_policy_screen";
   static const String aboutUs = "/about_us_screen";
+  static const String support = "/support_screen";
 
 
   static List<GetPage> routes = [
@@ -130,6 +132,7 @@ class AppRoute {
     GetPage(name: termsOfServices, page: ()=>  const TermsOfServiceScreen()),
     GetPage(name: privacyPolicy, page: ()=>  const PrivacyPolicyScreen()),
     GetPage(name: aboutUs, page: ()=>  const AboutUsScreen()),
+    GetPage(name: support, page: ()=>  const SupportScreen()),
 
   ];
 }

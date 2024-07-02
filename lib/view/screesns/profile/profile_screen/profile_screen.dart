@@ -94,7 +94,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 },
               ),
               SizedBox(height: 16.h),
-              const ProfileCard(imageSrc: AppIcons.support, title: "Support"),
+              ProfileCard(
+                imageSrc: AppIcons.support,
+                title: "Support",
+                onTap: () {
+                  Get.toNamed(AppRoute.support);
+                },
+              ),
               SizedBox(height: 16.h),
               Divider(height: 1.h, color: AppColors.purple_100),
               SizedBox(height: 16.h),
