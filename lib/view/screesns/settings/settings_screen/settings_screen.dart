@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/screesns/profile/inner_widgets/profile_card.dart';
@@ -54,13 +55,22 @@ class SettingsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ProfileCard(imageSrc: AppIcons.password, title: "Change Password"),
+              ProfileCard(
+                imageSrc: AppIcons.password,
+                title: "Change Password",
+                onTap: () {
+                  Get.offAndToNamed(AppRoute.changePasswordScreen);
+                },
+              ),
               SizedBox(height: 16.h),
-              const ProfileCard(imageSrc: AppIcons.language, title: "Change Language"),
+              const ProfileCard(
+                  imageSrc: AppIcons.language, title: "Change Language"),
               SizedBox(height: 16.h),
-              const ProfileCard(imageSrc: AppIcons.terms, title: "Terms Of Services"),
+              const ProfileCard(
+                  imageSrc: AppIcons.terms, title: "Terms Of Services"),
               SizedBox(height: 16.h),
-              const ProfileCard(imageSrc: AppIcons.privacy, title: "Privacy Policy"),
+              const ProfileCard(
+                  imageSrc: AppIcons.privacy, title: "Privacy Policy"),
               SizedBox(height: 16.h),
               const ProfileCard(imageSrc: AppIcons.aboutUs, title: "About Us"),
               SizedBox(height: 16.h),

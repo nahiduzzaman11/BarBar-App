@@ -118,7 +118,7 @@ class GetOTPScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
           child: CustomElevatedButton(
             onPressed: () {
-              Get.toNamed(AppRoute.resetPasswordScreen);
+              Get.offAndToNamed(AppRoute.resetPasswordScreen);
             },
             titleText: "Verify",
             buttonWidth: width,

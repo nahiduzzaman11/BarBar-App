@@ -78,7 +78,7 @@ class ForgetPasswordScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
           child: CustomElevatedButton(
             onPressed: () {
-              Get.toNamed(AppRoute.getOTPScreen);
+              Get.offAndToNamed(AppRoute.getOTPScreen);
             },
             titleText: "Get OTP",
             buttonWidth: width,

@@ -1,4 +1,3 @@
-import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
@@ -89,7 +88,7 @@ class ResetPasswordScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
           child: CustomElevatedButton(
             onPressed: () {
-              Get.offAllNamed(AppRoute.signInScreen);
+              Get.back();
             },
             titleText: "Reset Password",
             buttonWidth: width,

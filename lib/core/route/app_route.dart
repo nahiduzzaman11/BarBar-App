@@ -28,7 +28,8 @@ import 'package:barbar_app/view/screesns/salons_details/salons_details_screen.da
 import 'package:barbar_app/view/screesns/service_details/select_service_screen.dart';
 import 'package:barbar_app/view/screesns/service_details/service_details_screen.dart';
 import 'package:barbar_app/view/screesns/services/services_screen.dart';
-import 'package:barbar_app/view/screesns/settings/settings_screen.dart';
+import 'package:barbar_app/view/screesns/settings/change_password/change_password_screen.dart';
+import 'package:barbar_app/view/screesns/settings/settings_screen/settings_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -73,6 +74,7 @@ class AppRoute {
   static const String editProfile = "/edit_profile_screen";
   static const String editProfileValidation = "/edit_profile_validation_screen";
   static const String settingsScreen = "/settings_screen";
+  static const String changePasswordScreen = "/change_password_screen";
 
 
   static List<GetPage> routes = [
@@ -115,6 +117,7 @@ class AppRoute {
     GetPage(name: editProfile, page: ()=>  const EditProfileScreen()),
     GetPage(name: editProfileValidation, page: ()=>  const EditProfileValidationScreen()),
     GetPage(name: settingsScreen, page: ()=>  const SettingsScreen()),
+    GetPage(name: changePasswordScreen, page: ()=>  const ChangePasswordScreen()),
 
   ];
 }
