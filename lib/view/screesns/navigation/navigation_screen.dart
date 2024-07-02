@@ -1,8 +1,8 @@
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
-import 'package:barbar_app/view/screesns/appointment/appointment_screen.dart';
+import 'package:barbar_app/view/screesns/appointment/appointment_screen/appointment_screen.dart';
 import 'package:barbar_app/view/screesns/home/home_screen.dart';
-import 'package:barbar_app/view/screesns/profile/profile_screen.dart';
+import 'package:barbar_app/view/screesns/profile/profile_screen/profile_screen.dart';
 import 'package:barbar_app/view/screesns/search/search_screen.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:flutter/material.dart';

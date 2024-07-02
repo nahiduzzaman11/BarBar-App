@@ -3,7 +3,7 @@ import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
 import 'package:barbar_app/view/screesns/product/inner_widget/product_slider.dart';
-import 'package:barbar_app/view/screesns/salons_details/inner_widget/salon_reviews.dart';
+import 'package:barbar_app/view/screesns/salons/salons_details/inner_widget/salon_reviews.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
 import 'package:barbar_app/view/widgets/image/custom_image.dart';
 import 'package:barbar_app/view/widgets/text/custom_row_text.dart';

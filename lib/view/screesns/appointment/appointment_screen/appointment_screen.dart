@@ -23,7 +23,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
-    var width = MediaQuery.of(context).size.width;
+    //var width = MediaQuery.of(context).size.width;
 
     return SafeArea(
       top: true,
