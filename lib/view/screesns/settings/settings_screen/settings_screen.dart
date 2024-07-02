@@ -63,8 +63,13 @@ class SettingsScreen extends StatelessWidget {
                 },
               ),
               SizedBox(height: 16.h),
-              const ProfileCard(
-                  imageSrc: AppIcons.language, title: "Change Language"),
+              ProfileCard(
+                imageSrc: AppIcons.language,
+                title: "Change Language",
+                onTap: () {
+                  Get.toNamed(AppRoute.changeLanguageScreen);
+                },
+              ),
               SizedBox(height: 16.h),
               const ProfileCard(
                   imageSrc: AppIcons.terms, title: "Terms Of Services"),
