@@ -71,6 +71,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                     onChanged: (value) {
                       setState(() {
                         _value = value!;
+                        Get.back();
                       });
                     },
                   ),
@@ -93,6 +94,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                     onChanged: (value) {
                       setState(() {
                         _value = value!;
+                        Get.back();
                       });
                     },
                   ),
@@ -115,6 +117,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                     onChanged: (value) {
                       setState(() {
                         _value = value!;
+                        Get.back();
                       });
                     },
                   ),
