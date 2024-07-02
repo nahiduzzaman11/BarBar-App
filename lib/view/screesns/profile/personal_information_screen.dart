@@ -130,7 +130,7 @@ class PersonalInformationScreen extends StatelessWidget {
               SizedBox(height: 24.h),
               CustomElevatedButton(
                 onPressed: () {
-                  Get.toNamed(AppRoute.editProfile);
+                  Get.offAndToNamed(AppRoute.editProfile);
                 },
                 titleText: "Edit Profile",
                 buttonWidth: MediaQuery.of(context).size.width,

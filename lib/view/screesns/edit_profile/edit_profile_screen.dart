@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
@@ -66,14 +67,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomTextField(
-                textInputAction: TextInputAction.done,
+                textInputAction: TextInputAction.next,
                 hintText: "John Doe",
                 hintStyle: GoogleFonts.lato(fontSize: 14.sp, color: AppColors.white_20),
                 prefixIcon: const CustomImage(imageSrc: AppIcons.user, imageType: ImageType.svg, imageColor: AppColors.white_20),
               ),
               SizedBox(height: 16.h),
               CustomTextField(
-                textInputAction: TextInputAction.done,
+                textInputAction: TextInputAction.next,
                 hintText: "12 Jan 1999",
                 hintStyle: GoogleFonts.lato(fontSize: 14.sp, color: AppColors.white_20),
                 prefixIcon: const CustomImage(imageSrc: AppIcons.dob, imageType: ImageType.svg, imageColor: AppColors.white_20),
@@ -150,14 +151,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               ),
               SizedBox(height: 16.h),
               CustomTextField(
-                textInputAction: TextInputAction.done,
+                textInputAction: TextInputAction.next,
                 hintText: "+1 3545 364664",
                 hintStyle: GoogleFonts.lato(fontSize: 14.sp, color: AppColors.white_20),
                 prefixIcon: const CustomImage(imageSrc: AppIcons.phone, imageType: ImageType.svg, imageColor: AppColors.white_20),
               ),
               SizedBox(height: 16.h),
               CustomTextField(
-                textInputAction: TextInputAction.done,
+                textInputAction: TextInputAction.next,
                 hintText: "john.doe@gmail.com",
                 hintStyle: GoogleFonts.lato(fontSize: 14.sp, color: AppColors.white_20),
                 prefixIcon: const CustomImage(imageSrc: AppIcons.email, imageType: ImageType.svg, imageColor: AppColors.white_20),
@@ -172,7 +173,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               SizedBox(height: 24.h),
               CustomElevatedButton(
                 onPressed: () {
-                 // Get.toNamed(AppRoute.editProfile);
+                  Get.offAndToNamed(AppRoute.editProfileValidation);
                 },
                 titleText: "Update",
                 buttonWidth: MediaQuery.of(context).size.width,
