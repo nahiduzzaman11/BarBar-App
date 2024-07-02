@@ -20,6 +20,7 @@ import 'package:barbar_app/view/screesns/notification/notification_screen.dart';
 import 'package:barbar_app/view/screesns/onboarding/onboarding_screen.dart';
 import 'package:barbar_app/view/screesns/product/product_screen.dart';
 import 'package:barbar_app/view/screesns/product_details/product_details_screen.dart';
+import 'package:barbar_app/view/screesns/profile/personal_information_screen.dart';
 import 'package:barbar_app/view/screesns/salons/salons_screen.dart';
 import 'package:barbar_app/view/screesns/salons_details/salons_details_screen.dart';
 import 'package:barbar_app/view/screesns/service_details/select_service_screen.dart';
@@ -65,6 +66,9 @@ class AppRoute {
   static const String appointmentDetailsScreen = "/appointment_details_screen";
 
 
+  static const String personalInfoScreen = "/personal_information_screen";
+
+
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: ()=> const SplashScreen()),
     GetPage(name: onboarding, page: ()=> const OnboardingScreen()),
@@ -100,6 +104,8 @@ class AppRoute {
 
 
     GetPage(name: appointmentDetailsScreen, page: ()=>  const AppointmentDetailsScreen()),
+
+    GetPage(name: personalInfoScreen, page: ()=>  const PersonalInformationScreen()),
 
   ];
 }

@@ -25,6 +25,7 @@ class AppIcons {
   static const String settings = "$basePath/settings.svg";
   static const String support = "$basePath/support.svg";
   static const String wishlist = "$basePath/wishlist.svg";
+  static const String gender = "$basePath/gender.svg";
 
 
   static const String bell = "$basePath/bell.png";

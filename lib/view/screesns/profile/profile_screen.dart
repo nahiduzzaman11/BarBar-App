@@ -1,3 +1,4 @@
+import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
 import 'package:barbar_app/utils/icons/app_icons.dart';
 import 'package:barbar_app/utils/images/app_images.dart';
@@ -7,6 +8,7 @@ import 'package:barbar_app/view/widgets/pop_up/custom_pop_up.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -64,8 +66,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(height: 24.h),
               Divider(height: 1.h, color: AppColors.purple_60),
               SizedBox(height: 24.h),
-              const ProfileCard(
-                  imageSrc: AppIcons.user, title: "Personal Information"),
+              ProfileCard(
+                imageSrc: AppIcons.user,
+                title: "Personal Information",
+                onTap: () {
+                  Get.toNamed(AppRoute.personalInfoScreen);
+                },
+              ),
               SizedBox(height: 16.h),
               const ProfileCard(
                   imageSrc: AppIcons.wishlist, title: "My Wishlist"),
