@@ -86,7 +86,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(height: 16.h),
               const ProfileCard(imageSrc: AppIcons.history, title: "History"),
               SizedBox(height: 16.h),
-              const ProfileCard(imageSrc: AppIcons.settings, title: "Settings"),
+              ProfileCard(
+                imageSrc: AppIcons.settings,
+                title: "Settings",
+                onTap: () {
+                  Get.toNamed(AppRoute.settingsScreen);
+                },
+              ),
               SizedBox(height: 16.h),
               const ProfileCard(imageSrc: AppIcons.support, title: "Support"),
               SizedBox(height: 16.h),

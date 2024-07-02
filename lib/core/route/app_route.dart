@@ -28,6 +28,7 @@ import 'package:barbar_app/view/screesns/salons_details/salons_details_screen.da
 import 'package:barbar_app/view/screesns/service_details/select_service_screen.dart';
 import 'package:barbar_app/view/screesns/service_details/service_details_screen.dart';
 import 'package:barbar_app/view/screesns/services/services_screen.dart';
+import 'package:barbar_app/view/screesns/settings/settings_screen.dart';
 import 'package:barbar_app/view/screesns/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -71,6 +72,7 @@ class AppRoute {
   static const String personalInfoScreen = "/personal_information_screen";
   static const String editProfile = "/edit_profile_screen";
   static const String editProfileValidation = "/edit_profile_validation_screen";
+  static const String settingsScreen = "/settings_screen";
 
 
   static List<GetPage> routes = [
@@ -112,6 +114,7 @@ class AppRoute {
     GetPage(name: personalInfoScreen, page: ()=>  const PersonalInformationScreen()),
     GetPage(name: editProfile, page: ()=>  const EditProfileScreen()),
     GetPage(name: editProfileValidation, page: ()=>  const EditProfileValidationScreen()),
+    GetPage(name: settingsScreen, page: ()=>  const SettingsScreen()),
 
   ];
 }
