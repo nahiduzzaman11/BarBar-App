@@ -28,6 +28,7 @@ import 'package:barbar_app/view/screesns/salons/salons_details/salons_details_sc
 import 'package:barbar_app/view/screesns/services/service_details/select_service/select_service_screen.dart';
 import 'package:barbar_app/view/screesns/services/service_details/service_details_screen/service_details_screen.dart';
 import 'package:barbar_app/view/screesns/services/service_screen/services_screen.dart';
+import 'package:barbar_app/view/screesns/settings/about_us/about_us_screen.dart';
 import 'package:barbar_app/view/screesns/settings/change_language/change_language_screen.dart';
 import 'package:barbar_app/view/screesns/settings/change_password/change_password_screen.dart';
 import 'package:barbar_app/view/screesns/settings/privacy_policy/privacy_policy_screen.dart';
@@ -81,6 +82,7 @@ class AppRoute {
   static const String changeLanguageScreen = "/change_language_screen";
   static const String termsOfServices = "/terms_of_service_screen";
   static const String privacyPolicy = "/privacy_policy_screen";
+  static const String aboutUs = "/about_us_screen";
 
 
   static List<GetPage> routes = [
@@ -127,6 +129,7 @@ class AppRoute {
     GetPage(name: changeLanguageScreen, page: ()=>  const ChangeLanguageScreen()),
     GetPage(name: termsOfServices, page: ()=>  const TermsOfServiceScreen()),
     GetPage(name: privacyPolicy, page: ()=>  const PrivacyPolicyScreen()),
+    GetPage(name: aboutUs, page: ()=>  const AboutUsScreen()),
 
   ];
 }

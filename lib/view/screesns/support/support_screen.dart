@@ -1,15 +1,12 @@
-import 'package:barbar_app/core/route/app_route.dart';
 import 'package:barbar_app/utils/colors/app_colors.dart';
-import 'package:barbar_app/utils/icons/app_icons.dart';
-import 'package:barbar_app/view/screesns/profile/inner_widgets/profile_card.dart';
 import 'package:barbar_app/view/widgets/app_bar/custom_app_bar.dart';
 import 'package:barbar_app/view/widgets/text/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+class SupportScreen extends StatelessWidget {
+  const SupportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +37,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
               CustomText(
-                text: "Settings",
+                text: "Support",
                 fontSize: 18.sp,
                 color: AppColors.purple_100,
                 fontWeight: FontWeight.w600,
@@ -55,46 +52,15 @@ class SettingsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ProfileCard(
-                imageSrc: AppIcons.password,
-                title: "Change Password",
-                onTap: () {
-                  Get.offAndToNamed(AppRoute.changePasswordScreen);
-                },
+              CustomText(
+                text: "Lorem ipsum dolor sit amet consectetur. Imperdiet "
+                    "iaculis convallis bibendum massa id elementum "
+                    "consectetur neque mauris.",
+                fontSize: 16.sp,
+                textAlign: TextAlign.start,
+                fontWeight: FontWeight.w500,
+                maxLines: 100,
               ),
-              SizedBox(height: 16.h),
-              ProfileCard(
-                imageSrc: AppIcons.language,
-                title: "Change Language",
-                onTap: () {
-                  Get.toNamed(AppRoute.changeLanguageScreen);
-                },
-              ),
-              SizedBox(height: 16.h),
-              ProfileCard(
-                imageSrc: AppIcons.terms,
-                title: "Terms Of Services",
-                onTap: () {
-                  Get.toNamed(AppRoute.termsOfServices);
-                },
-              ),
-              SizedBox(height: 16.h),
-              ProfileCard(
-                imageSrc: AppIcons.privacy,
-                title: "Privacy Policy",
-                onTap: () {
-                  Get.toNamed(AppRoute.privacyPolicy);
-                },
-              ),
-              SizedBox(height: 16.h),
-              ProfileCard(
-                imageSrc: AppIcons.aboutUs,
-                title: "About Us",
-                onTap: () {
-                  Get.toNamed(AppRoute.aboutUs);
-                },
-              ),
-              SizedBox(height: 16.h),
             ],
           ),
         ),
