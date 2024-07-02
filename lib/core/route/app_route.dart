@@ -13,6 +13,7 @@ import 'package:barbar_app/view/screesns/booking_payment/add_payment_screen.dart
 import 'package:barbar_app/view/screesns/booking_payment/confirm_appointment_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/confirm_booking_screen.dart';
 import 'package:barbar_app/view/screesns/booking_payment/select_date_time_screen.dart';
+import 'package:barbar_app/view/screesns/history/history_screen.dart';
 import 'package:barbar_app/view/screesns/my_cart/check_out_screen.dart';
 import 'package:barbar_app/view/screesns/my_cart/my_cart_screen.dart';
 import 'package:barbar_app/view/screesns/navigation/navigation_screen.dart';
@@ -85,6 +86,7 @@ class AppRoute {
   static const String privacyPolicy = "/privacy_policy_screen";
   static const String aboutUs = "/about_us_screen";
   static const String support = "/support_screen";
+  static const String historyScreen = "/history_screen";
 
 
   static List<GetPage> routes = [
@@ -133,6 +135,7 @@ class AppRoute {
     GetPage(name: privacyPolicy, page: ()=>  const PrivacyPolicyScreen()),
     GetPage(name: aboutUs, page: ()=>  const AboutUsScreen()),
     GetPage(name: support, page: ()=>  const SupportScreen()),
+    GetPage(name: historyScreen, page: ()=>  const HistoryScreen()),
 
   ];
 }
